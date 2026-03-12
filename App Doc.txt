@@ -1,0 +1,25 @@
+Frontend:
+Create Two components: SinginComponent and ResigterComponent
+Each component will have a form for user input
+on form submission, send Http requests to the backend API endpoints
+Display success/error message based on backend response
+
+Backend
+expose Api Endpoints
+Post/Api/register for registration
+Post/Api/Login for signin
+sore user creatialsn and valided them 
+
+
+register 
+user fill usernae email, password and conform password
+angular send a Post request to /api/register
+backend save credentials and response a message
+angular display the message
+
+signin
+user enter Username and password
+angular send a post request to Api/login
+backend check credentials and respond with success/or
+and displau the message 
+
