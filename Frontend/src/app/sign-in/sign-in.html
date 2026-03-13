@@ -1,4 +1,4 @@
-<div class="sign-in-container">
+<!-- <div class="sign-in-container">
   <header>
     <h1 class="sign-in-title">Ready to start a new experience?</h1>
     <p class="sign-in-subtitle">Please sign in to continue.</p>
@@ -15,4 +15,119 @@
     </div>
     <button type="submit">Sign In</button>
   </form>
+</div> -->
+
+<!-- <div class="overlay" *ngIf="visible"> -->
+<div class="modal">
+  <!-- <button class="close-btn" (click)="close()">×</button> -->
+  <div class="login-page">
+    <mat-card class="mat-elevation-z12">
+      <mat-card-title style="text-align: center">SignIn/Register</mat-card-title>
+      <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+        <mat-tab label="Sign In">
+          <mat-card-content>
+            <form action="">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Email"
+                  required
+                  name="email"
+                  ngModel
+                  #email="ngModel"
+                />
+                <mat-error *ngIf="email.invalid">Email is required</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  required
+                  minlength="6"
+                  name="password"
+                  ngModel
+                  #password="ngModel"
+                />
+                <mat-error *ngIf="password.errors && password.errors">
+                  Password is required
+                </mat-error>
+                <mat-error *ngIf="password.errors && password.errors">
+                  Password must be of length 6
+                </mat-error>
+              </mat-form-field>
+              <mat-checkbox class="remember-me">Remember Me!</mat-checkbox>
+              <button mat-raised-button color="primary" class="login-button">Sign In</button>
+
+              <button mat-raised-button class="login-button">Login with Google</button>
+            </form>
+          </mat-card-content>
+        </mat-tab>
+        <mat-tab label="Register">
+          <mat-card-content>
+            <form action="">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="User Name"
+                  required
+                  name="username"
+                  ngModel
+                  #username="ngModel"
+                />
+
+                <mat-error *ngIf="username.invalid"> Username is required </mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Email"
+                  required
+                  name="email"
+                  ngModel
+                  #email="ngModel"
+                />
+                <mat-error *ngIf="email.invalid">Email is required</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  required
+                  minlength="6"
+                  name="password"
+                  ngModel
+                  #password="ngModel"
+                />
+                <mat-error *ngIf="password.errors && password.errors">
+                  Password is required
+                </mat-error>
+                <mat-error *ngIf="password.errors && password.errors">
+                  Password must be of length 6
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  required
+                  minlength="6"
+                  name="repassword"
+                  ngModel
+                  #repassword="ngModel"
+                />
+                <mat-error *ngIf="repassword.errors && repassword.errors">
+                  Re-Enter Password is required
+                </mat-error>
+              </mat-form-field>
+              <button mat-raised-button color="primary" class="login-button">Register</button>
+            </form>
+          </mat-card-content>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
 </div>
+<!-- </div> -->
