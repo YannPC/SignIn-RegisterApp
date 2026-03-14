@@ -1,0 +1,24 @@
+mat-card {
+  width: 100%;
+  margin: 100% auto;
+}
+mat-form-field,
+mat-checkbox {
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
+}
+mat-card-content {
+  margin-top: 20px;
+}
+
+.login-button {
+  margin-top: 50px;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+}
+.remember-me {
+  margin-top: 80px;
+}
