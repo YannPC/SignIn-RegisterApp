@@ -26,4 +26,13 @@ import { Component } from '@angular/core';
   templateUrl: './sign-in.html',
   styleUrl: './sign-in.scss',
 })
-export class SignIn {}
+export class SignIn {
+  message: string = '';
+
+  sucessMessage: string = 'You have successfully signed in!';
+  defaultMessage: string = 'Please enter your credentials to sign in.';
+  declineMessage: string = 'Invalid credentials. Please try again.';
+  signIn() {
+    console.log('Sign In button clicked');
+  }
+}
