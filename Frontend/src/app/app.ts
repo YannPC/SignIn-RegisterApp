@@ -9,5 +9,5 @@ import { SignIn } from './sign-in/sign-in';
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('Frontend');
+  protected readonly title = signal('Sign In / Register App');
 }

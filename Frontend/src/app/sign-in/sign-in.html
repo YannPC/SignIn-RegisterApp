@@ -40,7 +40,9 @@
                 </mat-error>
               </mat-form-field>
               <mat-checkbox class="remember-me">Remember Me!</mat-checkbox>
-              <button mat-raised-button color="primary" class="login-button">Sign In</button>
+              <button mat-raised-button color="primary" class="login-button" (click)="signIn()">
+                Sign In
+              </button>
 
               <button mat-raised-button class="login-button">Login with Google</button>
             </form>
