@@ -1,44 +1,40 @@
-// .header-title {
-//   text-align: center;
-//   // margin-top: 50px;
-//   margin-bottom: 50px;
-//   font-size: 24px;
-//   font-weight: bold;
-// }
-
 mat-card-title {
   text-align: center;
-  margin-top: 50px;
+  // margin-top: 50px;
   font-size: 24px;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 mat-card {
   width: 100%;
   margin: 100% auto;
-  font-size: 20px;
+  font-size: 25px;
 }
+
 mat-form-field,
 mat-checkbox {
   width: 100%;
   display: block;
   margin: auto;
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 50px;
 }
+
 mat-card-content {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .login-button {
   margin-top: 50px;
-  display: block;
+  display: flex;
   width: 80%;
   margin: 20px auto;
   font-size: 25px;
 }
 .remember-me {
   margin-top: 80px;
-  font-size: 20px;
+  font-size: 25px;
+  display: flex;
 }
