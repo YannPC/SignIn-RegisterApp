@@ -8,7 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { Auth } from '../auth';
 
 @Component({
   selector: 'app-sign-in',
@@ -27,12 +28,39 @@ import { Component } from '@angular/core';
   styleUrl: './sign-in.scss',
 })
 export class SignIn {
-  message: string = '';
+  // sign-in form
+  loginUsername = '';
+  loginPassword = '';
+  // register form
+  registerUsername = '';
+  registerEmail = '';
+  registerPassword = '';
+  registerConfirmPassword = '';
 
-  sucessMessage: string = 'You have successfully signed in!';
-  defaultMessage: string = 'Please enter your credentials to sign in.';
-  declineMessage: string = 'Invalid credentials. Please try again.';
+  message = '';
+
+  private auth = Inject(Auth);
+
   signIn() {
-    console.log('Sign In button clicked');
+    this.auth.login({ username: this.loginUsername, password: this.loginPassword }).subscribe({
+      next: (res: { message: string }) => (this.message = res.message),
+      error: (err: { error: { message: string } }) =>
+        (this.message = err?.error?.message || 'Login failed'),
+    });
+  }
+
+  register() {
+    this.auth
+      .register({
+        username: this.registerUsername,
+        email: this.registerEmail,
+        password: this.registerPassword,
+        confirmPassword: this.registerConfirmPassword,
+      })
+      .subscribe({
+        next: (res: { message: string }) => (this.message = res.message),
+        error: (err: { error: { message: string } }) =>
+          (this.message = err?.error?.message || 'Registration failed'),
+      });
   }
 }
